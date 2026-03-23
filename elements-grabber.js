@@ -1,3 +1,5 @@
+// Works only if you remove form-validator script in index.html
+
 const body = document.querySelector("body");
 const footer = document.querySelector("footer");
 

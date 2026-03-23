@@ -109,6 +109,7 @@ function clearError(input) {
 }
 
 form.addEventListener("submit", (e) => {
+  e.preventDefault();
   let isValid = true;
 
   inputs.forEach((input) => {
@@ -122,13 +123,7 @@ form.addEventListener("submit", (e) => {
     isValid = false;
   }
 
-  if (!isValid) {
-    e.preventDefault();
-    highFive.classList.add("hidden");
-
-    form.reportValidity();
+  if (isValid) {
+    highFive.classList.remove("hidden");
   }
-
-  e.preventDefault();
-  highFive.classList.remove("hidden");
 });
