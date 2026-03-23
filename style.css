@@ -82,6 +82,12 @@ a {
   --secondary: rgb(139, 222, 255);
   --secondary-dark: rgb(86, 180, 218);
   --secondary-darker: rgb(56, 127, 155);
+
+  --green: limegreen;
+  --green-dark: rgba(50, 205, 50, 0.25);
+
+  --red: red;
+  --red-dark: rgba(250, 0, 0, 0.12);
 }
 
 ::selection {
@@ -115,6 +121,7 @@ h1:active {
 form {
   margin-top: 10vh;
   margin-bottom: 20px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -122,6 +129,9 @@ form {
 
 .label-input {
   padding-bottom: 20px;
+  width: 100%;
+  max-width: 250px;
+
   display: flex;
   flex-direction: column;
 }
@@ -135,7 +145,7 @@ label:hover {
 }
 
 input {
-  width: 250px;
+  width: 100%;
   padding: 4px 12px;
   border-radius: 20px;
   border: 1px solid var(--primary-light);
@@ -172,6 +182,24 @@ option {
   border: none;
   user-select: none;
   cursor: help;
+}
+
+.error-message {
+  font-size: 0.8rem;
+  color: red;
+  margin-top: 4px;
+  min-height: 16px;
+  transition: all 0.2s ease;
+
+  display: block;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+/* Utilitary classes */
+
+.hidden {
+  display: none;
 }
 
 /* FOOTER */

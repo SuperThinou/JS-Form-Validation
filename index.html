@@ -22,15 +22,15 @@
             name="email"
             placeholder="someone@example.com"
             autocomplete="email"
-          />
+          /><span class="error-message"></span>
         </div>
         <div class="label-input" data-drag-id="country">
           <label for="country">COUNTRY </label>
           <select id="country" name="country" required>
             <option value="">Select a country</option>
             <option value="FR">France</option>
-            <option value="US">United States</option>
-          </select>
+            <option value="US">United States</option></select
+          ><span class="error-message"></span>
         </div>
         <div class="label-input" data-drag-id="postal">
           <label for="postal">POSTAL CODE</label>
@@ -44,7 +44,7 @@
             maxlength="5"
             placeholder="10000"
             autocomplete="postal-code"
-          />
+          /><span class="error-message"></span>
         </div>
         <div class="label-input" data-drag-id="password">
           <label for="password">PASSWORD</label>
@@ -57,7 +57,7 @@
             minlength="8"
             pattern="^(?=.*[A-Za-z])(?=.*\d).{8,}$"
             title="Minimum 8 caractères, avec au moins une lettre et un chiffre"
-          />
+          /><span class="error-message"></span>
         </div>
 
         <div class="label-input" data-drag-id="confirm-password">
@@ -71,7 +71,7 @@
             minlength="8"
             maxlength="64"
             autocomplete="new-password"
-          />
+          /><span class="error-message"></span>
         </div>
       </div>
 
@@ -80,6 +80,8 @@
     <button onclick="resetLayout()" class="reset-layout-btn">
       Reset layout
     </button>
+
+    <h2 class="hidden">High Five man! You did it!</h2>
 
     <footer data-drag-id="footer">
       <p>NBX 2025 ©</p>
