@@ -11,45 +11,56 @@
     <h1>JS Form Validation</h1>
 
     <form action="">
-      <div class="label-input">
-        <label for="email">EMAIL</label>
-        <input type="email" id="email" name="email" />
-      </div>
-      <div class="label-input">
-        <label for="country">COUNTRY</label>
-        <input type="text" id="country" name="country" />
-      </div>
-      <div class="label-input">
-        <label for="postal">POSTAL CODE</label>
-        <input type="text" id="postal" name="postal" />
-      </div>
-      <div class="label-input">
-        <label for="password">PASSWORD</label>
-        <input
-          required
-          type="password"
-          id="password"
-          name="user-password"
-          placeholder="8 characters minimum"
-          minlength="8"
-          maxlength="64"
-          autocomplete="new-password"
-        />
+      <div class="inputs-container">
+        <div class="label-input">
+          <label for="email">EMAIL</label>
+          <input
+            required
+            type="email"
+            id="email"
+            name="email"
+            placeholder="someone@example.com"
+            autocomplete="email"
+          />
+        </div>
+        <div class="label-input">
+          <label for="country">COUNTRY</label>
+          <input required type="text" id="country" name="country" />
+        </div>
+        <div class="label-input">
+          <label for="postal">POSTAL CODE</label>
+          <input required type="text" id="postal" name="postal" />
+        </div>
+        <div class="label-input">
+          <label for="password">PASSWORD</label>
+          <input
+            required
+            type="password"
+            id="password"
+            name="user-password"
+            placeholder="8 characters minimum"
+            minlength="8"
+            maxlength="64"
+            autocomplete="new-password"
+          />
+        </div>
+
+        <div class="label-input">
+          <label for="confirm-password">CONFIRM PASSWORD</label>
+          <input
+            required
+            type="password"
+            id="confirm-password"
+            name="user-confirm-password"
+            placeholder=""
+            minlength="8"
+            maxlength="64"
+            autocomplete="new-password"
+          />
+        </div>
       </div>
 
-      <div class="label-input">
-        <label for="confirm-password">CONFIRM PASSWORD</label>
-        <input
-          required
-          type="password"
-          id="confirm-password"
-          name="user-confirm-password"
-          placeholder=""
-          minlength="8"
-          maxlength="64"
-          autocomplete="new-password"
-        />
-      </div>
+      <button id="submitBtn" class="submit-btn">Submit</button>
     </form>
   </body>
 </html>

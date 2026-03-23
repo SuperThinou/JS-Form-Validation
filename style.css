@@ -102,6 +102,10 @@ h1 {
 
 form {
   margin-top: 20vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .label-input {
@@ -124,4 +128,16 @@ input {
   border-radius: 20px;
   border: 1px solid var(--primary-light);
   background-color: var(--primary-dark);
+}
+
+.submit-btn {
+  padding: 5px 30px;
+  border-radius: 10px;
+  border: 1px solid var(--primary-light);
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.submit-btn:hover {
+  background-color: var(--primary-darkest);
 }
