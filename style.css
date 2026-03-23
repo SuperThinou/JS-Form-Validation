@@ -84,6 +84,11 @@ a {
   --secondary-darker: rgb(56, 127, 155);
 }
 
+::selection {
+  color: blueviolet;
+  background-color: pink;
+}
+
 * {
   background-color: var(--primary-darker);
   color: var(--font-color);
@@ -98,6 +103,11 @@ body {
 
 h1 {
   padding: 10px;
+  position: absolute;
+  cursor: grab;
+}
+h1:active {
+  cursor: grabbing;
 }
 
 form {
@@ -128,6 +138,18 @@ input {
   border-radius: 20px;
   border: 1px solid var(--primary-light);
   background-color: var(--primary-dark);
+}
+
+select {
+  padding: 4px;
+  border-radius: 5px;
+  border: 1px solid var(--primary-light);
+  background-color: var(--primary-darker);
+  cursor: pointer;
+}
+
+option {
+  background-color: var(--primary-darker);
 }
 
 .submit-btn {

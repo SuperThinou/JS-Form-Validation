@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS Form Validation</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="script.js" defer />
+    <script src="script.js" defer></script>
+    <script src="grab-title.js" defer></script>
   </head>
   <body>
     <h1>JS Form Validation</h1>
@@ -25,11 +26,23 @@
         </div>
         <div class="label-input">
           <label for="country">COUNTRY</label>
-          <input required type="text" id="country" name="country" />
+          <select id="country" name="country" required>
+            <option value="">Select a country</option>
+            <option value="FR">France</option>
+            <option value="US">United States</option>
+          </select>
         </div>
         <div class="label-input">
           <label for="postal">POSTAL CODE</label>
-          <input required type="text" id="postal" name="postal" />
+          <input
+            required
+            type="text"
+            id="postal"
+            name="postal"
+            pattern="[0-9]{5}"
+            placeholder="10000"
+            autocomplete="postal-code"
+          />
         </div>
         <div class="label-input">
           <label for="password">PASSWORD</label>
@@ -40,8 +53,8 @@
             name="user-password"
             placeholder="8 characters minimum"
             minlength="8"
-            maxlength="64"
-            autocomplete="new-password"
+            pattern="^(?=.*[A-Za-z])(?=.*\d).{8,}$"
+            title="Minimum 8 caractères, avec au moins une lettre et un chiffre"
           />
         </div>
 
