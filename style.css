@@ -166,6 +166,13 @@ option {
   background-color: var(--primary-darkest);
 }
 
+.reset-layout-btn {
+  color: transparent;
+  border: none;
+  user-select: none;
+  cursor: help;
+}
+
 /* FOOTER */
 
 footer {
