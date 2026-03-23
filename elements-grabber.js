@@ -1,3 +1,6 @@
+const body = document.querySelector("body");
+const footer = document.querySelector("footer");
+
 makeDraggable(document.querySelector("h1"));
 const inputs = document.querySelectorAll(".label-input");
 
@@ -68,3 +71,23 @@ function resetLayout() {
   localStorage.clear();
   location.reload();
 }
+
+function getRandomColor() {
+  const R = Math.floor(Math.random() * 256);
+  const G = Math.floor(Math.random() * 256);
+  const B = Math.floor(Math.random() * 256);
+  const A = 1;
+  const randomColor = "rgba(" + R + "," + G + "," + B + "," + A + ")";
+  return randomColor;
+}
+
+function applyColor(element, color) {
+  const current = getComputedStyle(element).backgroundColor;
+
+  element.style.backgroundColor = color;
+}
+
+footer.addEventListener("click", () => {
+  const color = getRandomColor();
+  applyColor(footer, color);
+});

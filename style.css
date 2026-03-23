@@ -168,6 +168,7 @@ option {
 
 .reset-layout-btn {
   color: transparent;
+  background-color: transparent;
   border: none;
   user-select: none;
   cursor: help;
@@ -185,6 +186,10 @@ footer {
   justify-content: center;
   align-items: center;
   font-size: 1.1rem;
+}
+
+footer > * {
+  background-color: transparent;
 }
 
 .github-logo {
