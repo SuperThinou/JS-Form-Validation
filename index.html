@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS Form Validation</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+    <script src="form-validator.js" defer></script>
     <script src="elements-grabber.js" defer></script>
   </head>
   <body>
@@ -40,6 +40,8 @@
             id="postal"
             name="postal"
             pattern="[0-9]{5}"
+            minlength="5"
+            maxlength="5"
             placeholder="10000"
             autocomplete="postal-code"
           />
