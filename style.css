@@ -100,10 +100,12 @@ body {
   align-items: center;
   min-height: 100vh;
 }
+body.dragging {
+  user-select: none;
+}
 
 h1 {
   padding: 10px;
-  position: absolute;
   cursor: grab;
 }
 h1:active {

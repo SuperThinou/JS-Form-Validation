@@ -9,11 +9,11 @@
     <script src="grab-title.js" defer></script>
   </head>
   <body>
-    <h1>JS Form Validation</h1>
+    <h1 data-drag-id="title">JS Form Validation</h1>
 
     <form action="">
       <div class="inputs-container">
-        <div class="label-input">
+        <div class="label-input" data-drag-id="email">
           <label for="email">EMAIL</label>
           <input
             required
@@ -24,15 +24,15 @@
             autocomplete="email"
           />
         </div>
-        <div class="label-input">
-          <label for="country">COUNTRY</label>
+        <div class="label-input" data-drag-id="country">
+          <label for="country">COUNTRY </label>
           <select id="country" name="country" required>
             <option value="">Select a country</option>
             <option value="FR">France</option>
             <option value="US">United States</option>
           </select>
         </div>
-        <div class="label-input">
+        <div class="label-input" data-drag-id="postal">
           <label for="postal">POSTAL CODE</label>
           <input
             required
@@ -44,7 +44,7 @@
             autocomplete="postal-code"
           />
         </div>
-        <div class="label-input">
+        <div class="label-input" data-drag-id="password">
           <label for="password">PASSWORD</label>
           <input
             required
@@ -58,7 +58,7 @@
           />
         </div>
 
-        <div class="label-input">
+        <div class="label-input" data-drag-id="confirm-password">
           <label for="confirm-password">CONFIRM PASSWORD</label>
           <input
             required
@@ -75,8 +75,9 @@
 
       <button id="submitBtn" class="submit-btn">Steal my data</button>
     </form>
+    <!-- <button onclick="resetLayout()">Reset layout</button> -->
 
-    <footer>
+    <footer data-drag-id="footer">
       <p>NBX 2025 ©</p>
       <a href="https://github.com/SuperThinou" target="_blank"
         ><img
